@@ -16,7 +16,7 @@ body {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  animation: moving-sun 10s linear infinite;
+  animation: moving-sun 7s linear infinite;
 }
 
 .sky {
@@ -24,7 +24,7 @@ body {
   height: 30vh;
   width: 100vw;
   background-color: #3399ff;
-  animation: sky-animation 10s ease-in-out infinite;
+  animation: sky-animation 7s ease-in-out infinite;
   z-index: -1;
 }
 
