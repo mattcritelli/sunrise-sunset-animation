@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sun {
+  position: absolute;
+  bottom: -15vh;
+  left: -15vw;
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  animation: moving-sun 10s linear infinite;
+}
+
+.sky {
+  position: relative;
+  height: 30vh;
+  width: 100vw;
+  background-color: #3399ff;
+  animation: sky-animation 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+.grass {
+  height: 70vh;
+  width: 100vw;
+  background-color: #00cc66;
+}
+
+/* Refactored sun animation to be responsive based on vh/vw */
+@keyframes moving-sun {
+  0% {
+    background-color: #ff6600;
+  }
+  25% {
+    background-color: yellow;
+    transform: translate(20vw, -20vh);
+  }
+  50% {
+    transform: translate(55vw, -30vh);
+  }
+  75% {
+    background-color: yellow;
+    transform: translate(90vw, -20vh);
+  }
+  100% {
+    transform: translate(120vw, 0vh);
+    background-color: #e62e00;
+  }
+}
+
+@keyframes sky-animation {
+  0% {
+    background-color: #000066;
+  }
+  10% {
+    background-color: #ff6666;
+  }
+  30% {
+    background-color: #0066ff;
+  }
+  70% {
+    background-color: #0066ff;
+  }
+  90% {
+    background-color: #ff6666;
+  }
+  100% {
+    background-color: #000066;
+  }
+}
